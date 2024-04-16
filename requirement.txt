@@ -1,1 +1,5 @@
 react-icons
+npm i nodemon (automatic server restarter) not in production btw
+npm i express in api folder to get express
+npm init -y in root directory
+
