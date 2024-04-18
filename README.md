@@ -44,3 +44,39 @@ react
 react-dom
 react-router-dom
 These dependencies are listed in the package.json file and will be installed automatically when running npm install.
+
+Prerequisites
+Before running this application, make sure you have the following installed:
+
+Node.js
+MongoDB
+Installation
+Clone the repository:
+
+bash
+Copy code
+git clone <repository-url>
+Install dependencies:
+
+bash
+Copy code
+npm install express mongoose dotenv
+Configuration
+Create a .env file in the root directory of the project.
+
+Add the following environment variables to the .env file:
+
+plaintext
+Copy code
+MONGO=<your-mongodb-connection-string>
+
+Mongoose Schema and Model
+
+mongoose.Schema(): Defines the structure of a document (in this case, a user) in the MongoDB collection. It specifies the fields, their types, and any additional options such as validation rules or default values.
+
+mongoose.model(): Compiles the schema into a model. Models are constructors created from schemas, allowing you to create, read, update, and delete documents in the MongoDB collection associated with the model.
+
+
+instal package named 
+
+npm i bcryptjs
