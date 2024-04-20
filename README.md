@@ -248,6 +248,23 @@ This proxy configuration allows your frontend application to make API requests t
 
 - **Error Handling**: If an error occurs during authentication (e.g., network issues, user cancels the popup), the catch block logs the error.
 
+Here's a note you can add to your README file regarding the `PrivateRoute` component and its purpose in your application:
+
+### PrivateRoute
+
+The `PrivateRoute` component provides a way to protect certain routes in your application based on user authentication status. It acts as a wrapper around your nested routes and conditionally renders them depending on whether the user is authenticated.
+
+- **Functionality**:
+    - It uses `useSelector` from `react-redux` to access the `currentUser` state from the Redux store.
+    - If `currentUser` is not null (i.e., the user is logged in), the component renders an `<Outlet />`, which is a placeholder for nested routes.
+    - If `currentUser` is null (i.e., the user is not logged in), the component redirects the user to the `/sign-in` page using the `<Navigate />` component from `react-router-dom`.
+
+- **Usage**:
+    - To protect certain routes in your application, wrap the desired routes within a `PrivateRoute` component in your routing setup (e.g., in `App.js`).
+    - This setup ensures that only authenticated users can access the protected routes, while unauthenticated users are redirected to the sign-in page.
+
+By using `PrivateRoute`, you can effectively manage user access to different parts of your application, providing a secure and seamless user experience.
+
 ## Summary
 
 The guide covers the setup of a React Vite application with user authentication and authorization using a MongoDB backend, Redux state management, Redux Persist for data persistence, and Firebase Authentication for Google sign-in. The guide provides a structured approach to building a modern web application with these technologies, ensuring security and efficiency in handling user data and state management.
