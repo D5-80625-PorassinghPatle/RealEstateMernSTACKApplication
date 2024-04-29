@@ -18,7 +18,7 @@ const userSchema =new mongoose.Schema({
     },
     avatar: {
         type:String,
-        default:"https://www.pexels.com/photo/creative-graffiti-wall-with-portrait-of-frida-kahlo-6424244/"
+        default:"https://www.pexels.com/photo/man-in-black-jacket-771742/"
 
     }
 },{timestamps:true});
