@@ -18,7 +18,7 @@ const userSchema =new mongoose.Schema({
     },
     avatar: {
         type:String,
-        default:"https://www.pexels.com/photo/man-in-black-jacket-771742/"
+        default:"https://www.pexels.com/photo/man-wearing-black-pullover-and-white-and-black-mask-2230895/"
 
     }
 },{timestamps:true});
