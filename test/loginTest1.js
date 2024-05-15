@@ -17,10 +17,10 @@ async function loginTest() {
         await driver.wait(until.elementLocated(By.id('email')), 5000);
 
         // Locate the email input field using its ID and enter the email
-        await driver.findElement(By.id('email')).sendKeys('test1@selenium.com');
+        await driver.findElement(By.id('email')).sendKeys('test100@god.in');
 
         // Locate the password input field using its ID and enter the password
-        await driver.findElement(By.id('password')).sendKeys('1264');
+        await driver.findElement(By.id('password')).sendKeys('1234');
 
         // Locate and click the login button
         await driver.findElement(By.xpath("//button[text()='Sign In Dude']")).click();
