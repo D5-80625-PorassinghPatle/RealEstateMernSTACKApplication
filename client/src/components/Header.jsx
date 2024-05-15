@@ -9,7 +9,7 @@ function Header() {
       <div className="flex justify-between items-center max-w-8xl mx-auto p-3">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span><img className="rounded-full h-9 w-9 object-cover" src= "\public\img\swirl-42566.png"></img></span>
+            <span><img className="rounded-full h-9 w-9 object-cover " src= "\img\swirl-42566.png"></img></span>
             <span className="text-white ml-3">Swril</span>
             <span className="text-slate-100 ml-2">RealEstate</span>
           </h1>
@@ -36,9 +36,9 @@ function Header() {
 
           <Link to="/profile">
             { currentUser ? (
-              <img className="rounded-full h-9 w-9 object-cover" src={currentUser.avatar} alt="profile"></img>
+              <img className="rounded-full h-9 w-9 object-cover " src={currentUser.avatar} alt="profile"></img>
             ):(
-            <li className=" text-slate-100 hover:underline"> Sign in</li>
+            <li className=" text-slate-100 hover:underline "> Sign in</li>
           )}
           </Link>
           
