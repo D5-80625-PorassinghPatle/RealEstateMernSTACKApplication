@@ -109,13 +109,10 @@ export default function Home() {
       <style>{styles}</style>
       <div className="flex justify-center items-center overflow-hidden my-8 logo-container">
         <div className="flex space-x-8 animate-marquee">
-        <img src="..\..\public\s10.webp" alt="Bugatti Logo" className="mx-4" />
-        <img src="..\..\public\s7.png" alt="Bugatti Logo" className="mx-4" />
+       
+        <img src="https://media.licdn.com/dms/image/D4D22AQF3wTT-zzOTnw/feedshare-shrink_2048_1536/0/1684329437170?e=2147483647&v=beta&t=z3uNB_cZ71tXIE58hR8Wz9SQZavPNcCMDGtNJ3w-Tj8" alt="Bugatti Logo" className="mx-4" />
 
-          <img src="..\..\public\s5.jpg" alt="Bugatti Logo" className="mx-4" />
-          <img src="..\..\public\s3.webp" alt="Bugatti Logo" className="mx-4" />
-          <img src="..\..\public\s4.jpg" alt="Bugatti Logo" className="mx-4" />
-          <img src="..\..\public\s6.webp" alt="Bugatti Logo" className="mx-4" />
+          
         </div>
       </div>
 
