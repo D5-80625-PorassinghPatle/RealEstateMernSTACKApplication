@@ -2,7 +2,7 @@
   "name": "mern-stack-projects",
   "version": "1.0.0",
   "description": "Setting Up Enviornment and Creating react vite Application\r using commands to create react app using vite -----  npm create vite@latest Project___Name",
-  "main": "index.js",
+  "main": "api/index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon api/index.js",
