@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useRef, useState, useEffect } from 'react';
+import { motion } from 'framer-motion'; // Import motion from Framer Motion
 import {
   getDownloadURL,
   getStorage,
@@ -18,6 +19,7 @@ import {
 } from '../redux/user/userSlice.js';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 export default function Profile() {
   const fileRef = useRef(null);
   const { currentUser, loading, error } = useSelector((state) => state.user);
@@ -29,12 +31,6 @@ export default function Profile() {
   const [showListingsError, setShowListingsError] = useState(false);
   const [userListings, setUserListings] = useState([]);
   const dispatch = useDispatch();
-
-  // firebase storage
-  // allow read;
-  // allow write: if
-  // request.resource.size < 2 * 1024 * 1024 &&
-  // request.resource.contentType.matches('image/.*')
 
   useEffect(() => {
     if (file) {
@@ -160,8 +156,14 @@ export default function Profile() {
       console.log(error.message);
     }
   };
+
   return (
-    <div className='p-3 max-w-lg mx-auto'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className='p-3 max-w-lg mx-auto'
+    >
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
@@ -171,11 +173,14 @@ export default function Profile() {
           hidden
           accept='image/*'
         />
-        <img
-          onClick={() => fileRef.current.click()}
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           src={formData.avatar || currentUser.avatar}
           alt='profile'
           className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2'
+          whileHover={{ scale: 1.1 }}
+          onClick={() => fileRef.current.click()}
         />
         <p className='text-sm self-center'>
           {fileUploadError ? (
@@ -255,8 +260,11 @@ export default function Profile() {
             Your Listings
           </h1>
           {userListings.map((listing) => (
-            <div
+            <motion.div
               key={listing._id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               className='border rounded-lg p-3 flex justify-between items-center gap-4'
             >
               <Link to={`/listing/${listing._id}`}>
@@ -284,10 +292,10 @@ export default function Profile() {
                   <button className='text-green-700 uppercase'>Edit</button>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
