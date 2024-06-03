@@ -1,7 +1,7 @@
 {
-  "name": "mern-stack-projects",
+  "name": "mern-estate",
   "version": "1.0.0",
-  "description": "Setting Up Enviornment and Creating react vite Application using commands to create react app using vite -----  npm create vite@latest Project___Name",
+  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -15,17 +15,10 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.3.1",
-    "redux-persist": "^6.0.0",
-    "swiper": "^11.1.4"
-  },
-  "devDependencies": {
+    "mongoose": "^7.5.0",
     "nodemon": "^3.1.2"
-  },
-  "engines": {
-    "node": "20.12.2"
   }
 }
