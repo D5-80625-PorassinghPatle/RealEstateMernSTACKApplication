@@ -23,7 +23,7 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.2"
   },
   "engines": {
     "node": "20.12.2"
