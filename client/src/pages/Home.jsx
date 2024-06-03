@@ -6,15 +6,14 @@ import SwiperCore from 'swiper';
 import 'swiper/css/bundle';
 import { motion } from 'framer-motion';
 import ListingItem from '../components/ListingItem';
-const styles = `
-  @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
+const styles = `@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
-  .animate-marquee {
-    animation: marquee 20s linear infinite;
-  }
+.animate-marquee {
+  animation: marquee 65s linear infinite;
+}
   
   .logo-container img {
     max-width: 100%;
@@ -108,9 +107,15 @@ export default function Home() {
       {/* Logos of brands */}
       <style>{styles}</style>
       <div className="flex justify-center items-center overflow-hidden my-8 logo-container">
-        <div className="flex space-x-8 animate-marquee">
+        <div className="flex space-x-10 animate-marquee">
        
+        
         <img src="https://media.licdn.com/dms/image/D4D22AQF3wTT-zzOTnw/feedshare-shrink_2048_1536/0/1684329437170?e=2147483647&v=beta&t=z3uNB_cZ71tXIE58hR8Wz9SQZavPNcCMDGtNJ3w-Tj8" alt="Bugatti Logo" className="mx-4" />
+        <img src="https://drehomes.com/admin_d8p7Q69Btdcxdxmg/assets/media/project/dev/proj_dev_img_3220_bugatti-residences-logo.png" alt="Bugatti Logo" className="mx-4" />
+        <img src="https://noblelandre.com/wp-content/uploads/2022/12/Binghatti-logo-dark.png" alt="Bugatti Logo" className="mx-4" />
+        <img src="https://manage.tanamiproperties.com/Project/Project_Logo/1497/Thumb/1497.webp" alt="Bugatti Logo" className="mx-4" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lodha---New-LOgo.png/800px-Lodha---New-LOgo.png" alt="Bugatti Logo" className="mx-4" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoLvJwpmfSlc9NL8QH8vnsYloVoYXVCmUx8A&s" alt="Bugatti Logo" className="mx-4" />
 
           
         </div>
