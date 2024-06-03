@@ -1,13 +1,14 @@
 {
   "name": "mern-stack-projects",
   "version": "1.0.0",
-  "description": "Setting Up Enviornment and Creating react vite Application\r using commands to create react app using vite -----  npm create vite@latest Project___Name",
+  "description": "Setting Up Enviornment and Creating react vite Application using commands to create react app using vite -----  npm create vite@latest Project___Name",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api/index.js",
-    "build": "npm install && npm install --prefix client && npm run build --prefix client"  },
+    "build": "npm install && npm install --prefix client && npm run build --prefix client"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,8 +19,13 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.1",
-    "nodemon": "^3.1.0",
     "redux-persist": "^6.0.0",
     "swiper": "^11.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": "20.12.2"
   }
 }
