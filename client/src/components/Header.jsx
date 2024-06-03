@@ -24,13 +24,20 @@ export default function Header() {
   }, [location.search]);
   return (
     <header className='bg-black shadow-md'>
-      <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
+<a href='https://endearing-parfait-b5df4e.netlify.app/' target='_blank' rel='noopener noreferrer' className='cursor-pointer'>
+  <h1 className='font-bold text-sm sm:text-xl flex flex-wrap text-slate-100'>
+    Managed By Porassingh Patle
+  </h1>
+</a>
+      <div className='flex justify-between items-center max-w-7xl mx-auto p-3'>
+        
+        
         <Link to='/'>
           <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
           <span><img className="rounded-full h-9 w-9 object-cover " src= "\img\swirl-42566.png"></img></span>
-
-            <span className='text-slate-500'>Swril</span>
-            <span className='text-slate-700'>RealEstate</span>
+            <span className='text-slate-100'>Swril </span>
+            <span className='text-slate-200'>RealEstate</span>
+            
           </h1>
         </Link>
         <form

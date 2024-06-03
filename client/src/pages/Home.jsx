@@ -6,6 +6,23 @@ import SwiperCore from 'swiper';
 import 'swiper/css/bundle';
 import { motion } from 'framer-motion';
 import ListingItem from '../components/ListingItem';
+const styles = `
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+  
+  .logo-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+`;
+
 
 SwiperCore.use([Navigation]);
 
@@ -68,12 +85,12 @@ export default function Home() {
         variants={containerVariants}
       >
         <motion.h1 className='text-slate-700 font-bold text-3xl lg:text-6xl' variants={itemVariants}>
-          Find your next <span className='text-slate-500'>perfect</span>
+          Find your next <span className='text-slate-500'>Perfect</span>
           <br />
-          place with ease
+          Luxury Palace Here
         </motion.h1>
         <motion.div className='text-gray-400 text-xs sm:text-sm' variants={itemVariants}>
-          Sahand Estate is the best place to find your next perfect place to
+        Swirl Real Estate is the best place to find your next perfect place to
           live.
           <br />
           We have a wide range of properties for you to choose from.
@@ -87,6 +104,20 @@ export default function Home() {
           </Link>
         </motion.div>
       </motion.div>
+
+      {/* Logos of brands */}
+      <style>{styles}</style>
+      <div className="flex justify-center items-center overflow-hidden my-8 logo-container">
+        <div className="flex space-x-8 animate-marquee">
+        <img src="..\..\public\s10.webp" alt="Bugatti Logo" className="mx-4" />
+        <img src="..\..\public\s7.png" alt="Bugatti Logo" className="mx-4" />
+
+          <img src="..\..\public\s5.jpg" alt="Bugatti Logo" className="mx-4" />
+          <img src="..\..\public\s3.webp" alt="Bugatti Logo" className="mx-4" />
+          <img src="..\..\public\s4.jpg" alt="Bugatti Logo" className="mx-4" />
+          <img src="..\..\public\s6.webp" alt="Bugatti Logo" className="mx-4" />
+        </div>
+      </div>
 
       {/* swiper */}
       <motion.div
